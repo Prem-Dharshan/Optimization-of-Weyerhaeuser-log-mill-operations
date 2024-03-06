@@ -12,7 +12,7 @@ def calculateRevenue(data1, M: int, I: int, N: int, cost: float):
 
     for i in range(M):
         calculations[i].field_names = ["j"] + [j for j in range(1, N + 1)]
-        calculations[i].add_column("j", [k for k in range(1, I+1)])
+        calculations[i].add_column("j", [k for k in range(1, I + 1)])
 
     for i in range(M):
         print("\n\n")
@@ -36,7 +36,7 @@ def calculateRevenue(data1, M: int, I: int, N: int, cost: float):
                 j_r.append(0)
             r_r.append(j_r)
         arr.append(r_r)
-            
+
     pprint(arr)
 
     for i in range(1, I + 1):
@@ -54,15 +54,13 @@ def calculateRevenue(data1, M: int, I: int, N: int, cost: float):
                     max_revenue = total
                     js = j
                     ms = m
-                
+
                 # print(m-1, i-1, j-1)
                 # print(arr[m-1][i-1][j-1])
-                arr[m-1][i-1][j-1] = total
+                arr[m - 1][i - 1][j - 1] = total
 
             f[i] = max_revenue
             f_array[i] = (js, ms)
-
-
 
     pprint(f)
     pprint(f_array)
