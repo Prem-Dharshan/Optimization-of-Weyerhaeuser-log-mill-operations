@@ -62,7 +62,7 @@ def calculateRevenue(data1, M: int, I: int, N: int, cost: float):
         print(calculations[i])
         print("\n\n")
 
-    res: PrettyTable = ColorTable(theme=Themes.GREEN)
+    res: PrettyTable = ColorTable(theme=Themes.OCEAN)
     res.add_column("f(i)", f[1:])
     res.add_column("(j*, m*)", f_array[1:])
 
