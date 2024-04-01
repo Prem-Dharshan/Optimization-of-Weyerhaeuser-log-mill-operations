@@ -2,6 +2,7 @@ from pprint import pprint
 from typing import List, Tuple, Dict
 from prettytable import PrettyTable
 from prettytable.colortable import ColorTable, Themes
+import pandas as pd
 
 
 def calculateRevenue(data1, M: int, I: int, N: int, cost: float):
@@ -70,6 +71,14 @@ def calculateRevenue(data1, M: int, I: int, N: int, cost: float):
     print(res, "\n")
 
 
+def read_excel_data(filename):
+    data = {}
+    xls = pd.ExcelFile(filename)
+    for sheet_name in xls.sheet_names:
+        data[int(sheet_name)] = pd.read_excel(
+            filename, sheet_name=sheet_name, header=None).values.tolist()
+    return data
+
 def main():
 
     data = {
@@ -93,7 +102,17 @@ def main():
         ],
     }
 
-    calculateRevenue(data1=data, M=2, I=6, N=5, cost=0.15)
+    filename = input("Enter the Excel file name: ")
+    data = read_excel_data(filename)
+
+    pprint(data)
+
+    M = int(input("Enter the value of M: "))
+    I = int(input("Enter the value of I: "))
+    N = int(input("Enter the value of N: "))
+    COST = float(input("Enter the cost: "))
+
+    calculateRevenue(data1=data, M=M, I=I, N=N, cost=COST)
 
 
 if "__main__" == __name__:
