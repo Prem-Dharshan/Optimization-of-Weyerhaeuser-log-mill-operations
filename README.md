@@ -36,19 +36,33 @@ Before proceeding, ensure you have the following installed on your system:
      ```
      source .venv/bin/activate
      ```
+    - If you are using GIT Bash:
+      ```
+      source .venv\Scripts\activate
+      ```
 
 ## Installing Dependencies
 1. **Install Required Packages**:
    - While the virtual environment is active, install the project dependencies listed in `requirements.txt`:
+   
      ```
      pip install -r requirements.txt
      ```
 
 ## Usage
-Now that your environment is set up, you can run the optimization scripts and analyze the results.
+Now that your environment is set up, you can run the optimization scripts and analyze the results by running the `main.py` for the given dataset in the [Case Study](About/Case_Study_Operations_Research_by_Hamdy_A_Taha.pdf)
+
+```bash
+  python src/main.py
+```
+or 
+
+```bash
+  python3 src/main.py
+```
 
 ## Contributing
-If you'd like to contribute to this project, feel free to submit pull requests or open issues. We welcome your ideas and improvements!
+If you'd like to contribute to this project, feel free to submit pull requests or open issues. We welcome your ideas and improvements! 
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
