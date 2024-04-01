@@ -79,33 +79,13 @@ def read_excel_data(filename):
             filename, sheet_name=sheet_name, header=None).values.tolist()
     return data
 
-def main():
 
-    data = {
-        1: [
-            [0, 0, 0, 0, 0, 0],
-            [0, 1.00, 0, 0, 0, 0],
-            [0, 1.10, 1.15, 0, 0, 0],
-            [0, 1.40, 1.60, 2.80, 0, 0],
-            [0, 1.90, 1.90, 3.90, 4.10, 0],
-            [0, 2.10, 2.90, 4.40, 4.80, 7.20],
-            [0, 2.10, 3.50, 4.70, 6.10, 8.30],
-        ],
-        2: [
-            [0, 0, 0, 0, 0, 0],
-            [0, 1.10, 0, 0, 0, 0],
-            [0, 1.10, 2.30, 0, 0, 0],
-            [0, 1.33, 2.40, 3.40, 0, 0],
-            [0, 2.10, 3.30, 4.20, 4.10, 0],
-            [0, 2.20, 3.60, 4.30, 4.60, 6.00],
-            [0, 2.20, 4.50, 4.40, 5.00, 6.30],
-        ],
-    }
+def main():
 
     filename = input("Enter the Excel file name: ")
     data = read_excel_data(filename)
 
-    pprint(data)
+    # pprint(data)
 
     M = int(input("Enter the value of M: "))
     I = int(input("Enter the value of I: "))

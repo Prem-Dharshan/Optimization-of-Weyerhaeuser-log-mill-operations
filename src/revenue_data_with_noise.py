@@ -27,6 +27,7 @@ def generate_revenue_data(I, N):
         revenue_data.append(row)
     return revenue_data
 
+
 def calculateRevenue(data1, M: int, I: int, N: int, cost: float):
 
     calculations: List[PrettyTable] = []
